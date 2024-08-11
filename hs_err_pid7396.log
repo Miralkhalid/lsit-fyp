@@ -1,0 +1,196 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 134217728 bytes for Failed to commit area from 0x0000000081e00000 to 0x0000000089e00000 of length 134217728.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (t:/workspace/open/src/hotspot/os/windows/os_windows.cpp:3269), pid=7396, tid=9096
+#
+# JRE version:  (11.0.2+9) (build )
+# Java VM: OpenJDK 64-Bit Server VM (11.0.2+9, mixed mode, aot, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dcom.android.sdklib.toolsdir=C:\Users\Hp\AppData\Local\Android\Sdk\cmdline-tools\latest\bin\\.. com.android.sdklib.tool.sdkmanager.SdkManagerCli --list
+
+Host: Intel(R) Core(TM) i5-6300U CPU @ 2.40GHz, 4 cores, 7G,  Windows 10 , 64 bit Build 22621 (10.0.22621.3672)
+Time: Sat Jun 15 23:13:33 2024 Pakistan Standard Time elapsed time: 0 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000246e8ed7800):  JavaThread "Unknown thread" [_thread_in_vm, id=9096, stack(0x0000006191500000,0x0000006191600000)]
+
+Stack: [0x0000006191500000,0x0000006191600000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x63489a]
+V  [jvm.dll+0x771f9f]
+V  [jvm.dll+0x773648]
+V  [jvm.dll+0x773d03]
+V  [jvm.dll+0x25eba8]
+V  [jvm.dll+0x631d3a]
+V  [jvm.dll+0x626775]
+V  [jvm.dll+0x313ffc]
+V  [jvm.dll+0x313e82]
+V  [jvm.dll+0x3196e6]
+V  [jvm.dll+0x36579f]
+V  [jvm.dll+0x3651c0]
+V  [jvm.dll+0x2f0ff8]
+V  [jvm.dll+0x2f2156]
+V  [jvm.dll+0x74b4f7]
+V  [jvm.dll+0x74cc3f]
+V  [jvm.dll+0x372609]
+V  [jvm.dll+0x731b69]
+V  [jvm.dll+0x3e1bad]
+V  [jvm.dll+0x3e3e81]
+C  [java.exe+0x3607]
+C  [java.exe+0x1746c]
+C  [KERNEL32.DLL+0x1257d]
+C  [ntdll.dll+0x5af28]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00000246e6de20d0, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x00000246e8ef0800 GCTaskThread "GC Thread#0" [stack: 0x0000006191600000,0x0000006191700000] [id=9408]
+  0x00000246e8f1f800 ConcurrentGCThread "G1 Main Marker" [stack: 0x0000006191700000,0x0000006191800000] [id=13776]
+  0x00000246e8f20800 ConcurrentGCThread "G1 Conc#0" [stack: 0x0000006191800000,0x0000006191900000] [id=15780]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffd5979f5b7]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00000246e8ed72b0] Heap_lock - owner thread: 0x00000246e8ed7800
+
+Heap address: 0x0000000081e00000, size: 2018 MB, Compressed Oops mode: Non-zero based: 0x0000000081e00000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff7a6d90000 - 0x00007ff7a6dd5000 	C:\Users\Hp\AppData\Local\jdk-11.0.2\bin\java.exe
+0x00007ffda5b10000 - 0x00007ffda5d27000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ffda45b0000 - 0x00007ffda4674000 	C:\Windows\System32\KERNEL32.DLL
+0x00007ffda31d0000 - 0x00007ffda357c000 	C:\Windows\System32\KERNELBASE.dll
+0x00007ffda4400000 - 0x00007ffda45ae000 	C:\Windows\System32\USER32.dll
+0x00007ffda36b0000 - 0x00007ffda36d6000 	C:\Windows\System32\win32u.dll
+0x00007ffda3de0000 - 0x00007ffda3e09000 	C:\Windows\System32\GDI32.dll
+0x00007ffda3030000 - 0x00007ffda3149000 	C:\Windows\System32\gdi32full.dll
+0x00007ffda2e70000 - 0x00007ffda2f0a000 	C:\Windows\System32\msvcp_win.dll
+0x00007ffda2f10000 - 0x00007ffda3021000 	C:\Windows\System32\ucrtbase.dll
+0x00007ffd8ee90000 - 0x00007ffd8f123000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.3672_none_2713b9d173822955\COMCTL32.dll
+0x00007ffda4680000 - 0x00007ffda4727000 	C:\Windows\System32\msvcrt.dll
+0x00007ffda4730000 - 0x00007ffda4761000 	C:\Windows\System32\IMM32.DLL
+0x00007ffd8c8b0000 - 0x00007ffd8c8c6000 	C:\Users\Hp\AppData\Local\jdk-11.0.2\bin\vcruntime140.dll
+0x00007ffd7b820000 - 0x00007ffd7b8ca000 	C:\Users\Hp\AppData\Local\jdk-11.0.2\bin\msvcp140.dll
+0x00007ffd594a0000 - 0x00007ffd59fc3000 	C:\Users\Hp\AppData\Local\jdk-11.0.2\bin\server\jvm.dll
+0x00007ffda3e10000 - 0x00007ffda3ec2000 	C:\Windows\System32\ADVAPI32.dll
+0x00007ffda4350000 - 0x00007ffda43fa000 	C:\Windows\System32\sechost.dll
+0x00007ffda2e40000 - 0x00007ffda2e68000 	C:\Windows\System32\bcrypt.dll
+0x00007ffda4220000 - 0x00007ffda4335000 	C:\Windows\System32\RPCRT4.dll
+0x00007ffda5ac0000 - 0x00007ffda5ac8000 	C:\Windows\System32\PSAPI.DLL
+0x00007ffd8bc50000 - 0x00007ffd8bc59000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007ffda3d60000 - 0x00007ffda3dd1000 	C:\Windows\System32\WS2_32.dll
+0x00007ffd9ae50000 - 0x00007ffd9ae84000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ffd99170000 - 0x00007ffd9917a000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ffda1e30000 - 0x00007ffda1e48000 	C:\Windows\SYSTEM32\kernel.appcore.dll
+0x00007ffd7d640000 - 0x00007ffd7d651000 	C:\Users\Hp\AppData\Local\jdk-11.0.2\bin\verify.dll
+0x00007ffd9d6d0000 - 0x00007ffd9d902000 	C:\Windows\SYSTEM32\DBGHELP.DLL
+0x00007ffda4770000 - 0x00007ffda4af8000 	C:\Windows\System32\combase.dll
+0x00007ffda4b00000 - 0x00007ffda4bd7000 	C:\Windows\System32\OLEAUT32.dll
+0x00007ffd7e470000 - 0x00007ffd7e4a2000 	C:\Windows\SYSTEM32\dbgcore.DLL
+0x00007ffda3150000 - 0x00007ffda31cb000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007ffd7cd10000 - 0x00007ffd7cd38000 	C:\Users\Hp\AppData\Local\jdk-11.0.2\bin\java.dll
+0x00007ffd7c300000 - 0x00007ffd7c316000 	C:\Users\Hp\AppData\Local\jdk-11.0.2\bin\zip.dll
+0x00007ffd8b1b0000 - 0x00007ffd8b1ba000 	C:\Users\Hp\AppData\Local\jdk-11.0.2\bin\jimage.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Users\Hp\AppData\Local\jdk-11.0.2\bin;C:\Windows\SYSTEM32;C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.3672_none_2713b9d173822955;C:\Users\Hp\AppData\Local\jdk-11.0.2\bin\server
+
+VM Arguments:
+jvm_args: -Dcom.android.sdklib.toolsdir=C:\Users\Hp\AppData\Local\Android\Sdk\cmdline-tools\latest\bin\\.. 
+java_command: com.android.sdklib.tool.sdkmanager.SdkManagerCli --list
+java_class_path (initial): C:\Users\Hp\AppData\Local\Android\Sdk\cmdline-tools\latest\bin\..\lib\sdkmanager-classpath.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 3                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 1                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 4                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 134217728                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 2116026368                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5830092                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122914074                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122914074                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Users\Hp\AppData\Local\jdk-11.0.2
+CLASSPATH=C:\Users\Hp\AppData\Local\Android\Sdk\cmdline-tools\latest\bin\..\lib\sdkmanager-classpath.jar
+PATH=D:\reactnativeapp\myapp\node_modules\.bin;D:\reactnativeapp\myapp\node_modules\.bin;D:\reactnativeapp\node_modules\.bin;D:\node_modules\.bin;C:\Users\Hp\AppData\Roaming\nvm\v22.3.0\node_modules\npm\node_modules\@npmcli\run-script\lib\node-gyp-bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Users\Hp\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\Java\jdk-17\bin;C:\Program Files\nodejs;C:\Users\Hp\Downloads\openlogic-openjdk-17.0.10+7-windows-x64\openlogic-openjdk-17.0.10+7-windows-x64\bin;C:\Users\Hp\AppData\Local\Android\Sdk;C:\Users\Hp\Downloads\mongodb-windows-x86_64-7.0.11 (1).zip\mongodb-win32-x86_64-windows-7.0.11\bin;C:\Program Files\MongoDB\Server\7.0\data;C:\Users\Hp\AppData\Local\jdk-11.0.2\bin;C:\Users\Hp\AppData\Local\Android\Sdk\tools;C:\Users\Hp\AppData\Local\Android\Sdk\tools;C:\Users\Hp\AppData\Local\Microsoft\WindowsApps;C:\Users\Hp\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\Hp\AppData\Local\Android\Sdk\platform-tools;D:\miral\Microsoft VS Code\bin
+USERNAME=Hp
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 78 Stepping 3, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 22621 (10.0.22621.3672)
+
+CPU:total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 78 stepping 3, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, rtm, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx, fma
+
+Memory: 4k page, system-wide physical 8070M (494M free)
+TotalPageFile size 10138M (AvailPageFile size 72M)
+current process WorkingSet (physical memory assigned to process): 10M, peak: 10M
+current process commit charge ("private bytes"): 51M, peak: 179M
+
+vm_info: OpenJDK 64-Bit Server VM (11.0.2+9) for windows-amd64 JRE (11.0.2+9), built on Jan 18 2019 05:23:22 by "mach5one" with MS VC++ 15.5 (VS2017)
+
+END.
