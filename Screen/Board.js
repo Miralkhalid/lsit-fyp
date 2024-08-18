@@ -11,7 +11,7 @@ const Header = () => {
 
 const Boxes = ({ navigation }) => {
     return (
-        <View style={styles.Boxcontainer}>
+        <View style={styles.Container}>
             <View style={styles.box}>
                 <View style={styles.inner}>
                     <TouchableOpacity onPress={() => navigation.navigate('CourseRegistration')}>
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
           color:'white',
           padding:5,
         },
-    Boxcontainer: {
+    Container: {
         height: '50%',
         width: '100%',
         flexDirection: 'row',

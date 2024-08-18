@@ -5,7 +5,7 @@ import { ImageBackground, SafeAreaView,StyleSheet, Text, TouchableOpacity, View 
   const Boxes = ({navigation}) => {
     return (
       <View style={styles.container}>
-      <View style={styles.Boxcontainer}>
+      <View style={styles.Container}>
         <View style={styles.box}>
           <View style={styles.inner}>
             <TouchableOpacity onPress={() => navigation.navigate('Jobupload')}>
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
       backgroundColor:'white',
       height:'100%',
     },
-    Boxcontainer:{
+    Container:{
       //backgroundColor:'red',
       height:'50%',
       width:'100%',

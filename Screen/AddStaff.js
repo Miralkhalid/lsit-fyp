@@ -67,7 +67,7 @@ const AddStaff = ({navigation}) => {
       <Text style={styles.title}>Add Staff</Text>
       <View style={styles.horizontal}></View>
       <View style={{marginVertical:'5%'}}>
-      <Text style={styles.text}>Enter staff credientials</Text>
+      <Text style={styles.text}>Enter staff credentials</Text>
       <TextInput
         placeholder="Email"
         value={email}
@@ -97,7 +97,7 @@ const AddStaff = ({navigation}) => {
           <Text style={styles.buttonText}>Create Staff</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.updatebtn} onPress={() => navigation.navigate('UpdateStaff')} >
+        <TouchableOpacity style={styles.UpdateBtn} onPress={() => navigation.navigate('UpdateStaff')} >
           <Text style={styles.buttonText}>Update Staff</Text>
         </TouchableOpacity>
         </View>
@@ -160,7 +160,7 @@ const styles = StyleSheet.create({
     width: 250,
     height: 1,
   },
-  updatebtn:{
+  UpdateBtn:{
     backgroundColor: "#8c8c9f",
     padding: 15,
     borderRadius: 10,

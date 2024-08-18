@@ -4,44 +4,44 @@ import {ImageBackground, SafeAreaView, StyleSheet, Text, TouchableOpacity, View,
   const Boxes = ({navigation}) => {
     const [loading, setLoading] = useState(false);
 
-    const handleNavigation = (screen) => {
-      setLoading(true);
-      setTimeout(() => {
-        setLoading(false);
-        navigation.navigate(screen);
-      }, 1000); // Simulate a delay for the loader, replace with actual navigation delay
-    };
+//    const handleNavigation = (scree) => {
+//      setLoading(true);
+//      setTimeout(() => {
+//        setLoading(false);
+//        navigation.navigate(screen);
+//      }, 1000); // Simulate a delay for the loader, replace with actual navigation delay
+//    };
 
     return (
      <View style={styles.container}>
         <ImageBackground source={require('./images/design.png')} resizeMode='cover' style={{height:'100%', width:'100%'}}>
         <View style={styles.box}>
            <View style={styles.inner}>
-              <TouchableOpacity style={styles.touch} onPress={() => handleNavigation('Registration')}>
+              <TouchableOpacity style={styles.touch} onPress={() => navigation.navigate('Registration')}>
                 <Text style={styles.btn}>Course Registration</Text>
               </TouchableOpacity>
 
-              <TouchableOpacity style={styles.touch} onPress={() => handleNavigation('Regcourse')}>
+              <TouchableOpacity style={styles.touch} onPress={() => navigation.navigate('Regcourse')}>
                 <Text style={styles.btn} >Registered Courses</Text>
               </TouchableOpacity>
           </View>
         </View>
 
-        <Modal
-        animationType="fade"
-        transparent={true}
-        visible={loading}
-        onRequestClose={() => {
-          setLoading(!loading);
-        }}
-      >
-        <View style={styles.modalBackground}>
-          <View style={styles.modalContainer}>
-            <ActivityIndicator size="large" color="#3b3b66" />
-            <Text style={styles.loadingText}>Loading...</Text>
-          </View>
-        </View>
-      </Modal>
+//        <Modal
+//        animationType="fade"
+//        transparent={true}
+//        visible={loading}
+//        onRequestClose={() => {
+//          setLoading(!loading);
+//        }}
+//      >
+//        <View style={styles.modalBackground}>
+//          <View style={styles.modalContainer}>
+//            <ActivityIndicator size="large" color="#3b3b66" />
+//            <Text style={styles.loadingText}>Loading...</Text>
+//          </View>
+//        </View>
+//      </Modal>
         </ImageBackground>
      </View>
     )

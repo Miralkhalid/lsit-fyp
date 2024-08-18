@@ -12,7 +12,7 @@ const Header = () => {
 
   const Boxes = ({navigation}) => {
     return (
-      <View style={styles.Boxcontainer}>
+      <View style={styles.Container}>
         
         <View style={styles.box}>
           <View style={styles.inner}>
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
         justifyContent:'center',
 
     },
-    Boxcontainer:{
+    Container:{
       //backgroundColor:'red',
       height:'50%',
       width:'100%',
