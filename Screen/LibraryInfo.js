@@ -18,39 +18,39 @@ const LibraryInfo = ({ navigation }) => {
       Alert.alert('Error', 'All fields are required');
       return;
     }
-
-    try {
-      const token = await AsyncStorage.getItem('jwtToken');
-      const config = {
-        headers: {
-          Authorization: `Bearer ${token}`
-        }
-      };
-      const response = await axios.post(`${API_URL}/admin/book/create`, {
-        title,
-        author,
-        isbn,
-        publication_date: publicationDate,
-        genre
-      }, config);
-
-      if (response.data) {
-        Alert.alert('Success', 'Book added successfully');
-        resetForm();
-      }
-    } catch (error) {
-      console.error('Error adding book', error);
-      if (error.response) {
-        const errors = error.response.data.errors;
-        if (errors && Object.keys(errors).length > 0) {
-          const firstErrorKey = Object.keys(errors)[0];
-          Alert.alert('Validation Error', errors[firstErrorKey][0]);
-        } else {
-          Alert.alert('Error', error.response.data.message || 'Failed to add book');
-        }
-      } else {
-        Alert.alert('Error', 'Network error. Please try again later.');
-      }
+//
+//    try {
+//      const token = await AsyncStorage.getItem('jwtToken');
+//      const config = {
+//        headers: {
+//          Authorization: `Bearer ${token}`
+//        }
+//      };
+//      const response = await axios.post(`${API_URL}/admin/book/create`, {
+//        title,
+//        author,
+//        isbn,
+//        publication_date: publicationDate,
+//        genre
+//      }, config);
+//
+//      if (response.data) {
+//        Alert.alert('Success', 'Book added successfully');
+//        resetForm();
+//      }
+//    } catch (error) {
+//      console.error('Error adding book', error);
+//      if (error.response) {
+//        const errors = error.response.data.errors;
+//        if (errors && Object.keys(errors).length > 0) {
+//          const firstErrorKey = Object.keys(errors)[0];
+//          Alert.alert('Validation Error', errors[firstErrorKey][0]);
+//        } else {
+//          Alert.alert('Error', error.response.data.message || 'Failed to add book');
+//        }
+//      } else {
+//        Alert.alert('Error', 'Network error. Please try again later.');
+//      }
     }
   };
 

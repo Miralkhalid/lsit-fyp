@@ -1,5 +1,3 @@
-// StudentGrades.js
-
 import React from 'react';
 import { SafeAreaView, StyleSheet, Text, Image,View } from 'react-native';
 import UploadGrades from './UploadGrades';

@@ -103,8 +103,6 @@ const Account = ({ navigation }) => {
 
 const styles = StyleSheet.create({
     container: {
-        // flex: 1,
-        // alignItems: 'center',
         backgroundColor: 'white',
         // paddingHorizontal: 20,
     },

@@ -66,7 +66,6 @@ const styles = StyleSheet.create({
       
     },
     header:{
-        //backgroundColor:'yellow',
         height:'35%',
         justifyContent:'center',
 
@@ -82,7 +81,6 @@ const styles = StyleSheet.create({
       justifyContent:'center',
     },
     box:{
-       // backgroundColor:'yellow',
         height:'50%',
         width:'50%',
         padding:5,
@@ -106,8 +104,7 @@ const styles = StyleSheet.create({
         color:'white',
         fontSize:14,
         textAlign:'center',
-        marginTop:55, 
-       // backgroundColor:'#3b3b66',  
+        marginTop:55,
         height:'60%',
     }
 })

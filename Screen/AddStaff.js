@@ -3,7 +3,6 @@ import { View, TextInput, Image, Alert, StyleSheet, Text, ScrollView, TouchableO
 import axios from 'axios';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-// Replace this URL with the actual URL of your Laravel backend
 const API_URL = 'http://192.168.0.106:8000/api';
 
 const AddStaff = ({navigation}) => {
@@ -18,13 +17,11 @@ const AddStaff = ({navigation}) => {
       Alert.alert('Error', 'All fields are required');
       return;
     }
-
     try {
-      // const token = '95|5zMS9hVAizfu2Qs5dSwc7jt2XNetXDTRI1FNejQa8999b085';
       const token = await AsyncStorage.getItem('jwtToken')
       const config = {
         headers: {
-          Authorization: `Bearer ${token}` // Corrected the syntax here
+          Authorization: `Bearer ${token}`
         }
       };
       const response = await axios.post(`${API_URL}/admin/staff/create`, {
