@@ -1,16 +1,16 @@
 import React , {useState} from 'react'
 import { Image, SafeAreaView,StyleSheet, Text, TouchableOpacity, View, Modal, ActivityIndicator } from 'react-native'
 
-  const Boxes = ({navigation}) => {
+  const Boxes = () => {
     const [loading, setLoading] = useState(false);
 
-    const handleNavigation = (screen) => {
-      setLoading(true);
-      setTimeout(() => {
-        setLoading(false);
-        navigation.navigate(screen);
-      }, 1000); // Simulate a delay for the loader, replace with actual navigation delay
-    };
+    // const handleNavigation = () => {
+    //   setLoading(true);
+    //   setTimeout(() => {
+    //     setLoading(false);
+    //     // navigation.navigate(scre);
+    //   }, 1000); // Simulate a delay for the loader, replace with actual navigation delay
+    // };
   
     return (
       
@@ -21,14 +21,14 @@ import { Image, SafeAreaView,StyleSheet, Text, TouchableOpacity, View, Modal, Ac
          <View style={styles.horizontal}></View>
          <View style={styles.box}>
           <View style={styles.inner}>
-            <TouchableOpacity onPress={() => handleNavigation('Createcourse')}>
+            <TouchableOpacity onPress={() => navigation.navigate('Createcourse')}>
                 <Text style={styles.button}>Create Courses</Text>
             </TouchableOpacity>
           </View>  
         </View>
         <View style={styles.box}>
         <View style={styles.inner}>
-        <TouchableOpacity onPress={() => handleNavigation('CourseListing')}>
+        <TouchableOpacity onPress={() => navigation.navigate('CourseListing')}>
                 <Text style={styles.button}>Course list</Text>
             </TouchableOpacity>
           </View>  
@@ -36,27 +36,27 @@ import { Image, SafeAreaView,StyleSheet, Text, TouchableOpacity, View, Modal, Ac
 
         <View style={styles.box}>
           <View style={styles.inner}>
-          <TouchableOpacity onPress={() => handleNavigation('Approvecourse')} >
+          <TouchableOpacity onPress={() => navigation.navigate('Approvecourse')} >
                 <Text style={styles.button}>Approval Courses</Text>
             </TouchableOpacity>
           </View>  
         </View>
   
-        <Modal
+        {/* <Modal
         animationType="fade"
         transparent={true}
         visible={loading}
         onRequestClose={() => {
           setLoading(!loading);
         }}
-      >
-        <View style={styles.modalBackground}>
+      > */}
+        {/* <View style={styles.modalBackground}>
           <View style={styles.modalContainer}>
             <ActivityIndicator size="large" color="#3b3b66" />
             <Text style={styles.loadingText}>Loading...</Text>
           </View>
         </View>
-      </Modal>
+      </Modal> */}
        </View>
     )
   }

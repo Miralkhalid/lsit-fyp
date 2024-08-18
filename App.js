@@ -22,7 +22,7 @@ import CourseRegistration from "./Screen/CourseRegistration";
 import LSIT from "./LSIT";
 import CareerServices from "./Screen/CareerServices";
 import Academic from "./Screen/Academic";
-import FeeDetails from "./Screen/FeeDetails";
+// import FeeDetails from "./Screen/FeeDetails";
 import Staff from "./Staff";
 import ClassAttendance from "./Staff/ClassAttendance";
 import StaffBoard from "./Staff/StaffBoard";
@@ -60,7 +60,6 @@ import Courses from "./Screen/Courses.js";
 import BSCS from "./Staff/BSCS.js";
 import LibraryInfo from "./Screen/LibraryInfo.js";
 
-// const Stack = createNativeStackNavigator();
 
 const App = () =>{
   const Stack = createNativeStackNavigator();
@@ -82,7 +81,7 @@ const App = () =>{
     <Stack.Screen name="Idcard" component={Idcard}></Stack.Screen>
     <Stack.Screen name="Idcreate" component={Idcreate}></Stack.Screen>
     <Stack.Screen name="Services" component={Services}></Stack.Screen>
-    <Stack.Screen name="Jobportal" component={Jobs}></Stack.Screen>
+    <Stack.Screen name="Jobs" component={Jobs}></Stack.Screen>
     <Stack.Screen name="Alumni" component={Alumni} ></Stack.Screen>
     <Stack.Screen name="Reset" component={Reset}></Stack.Screen>
     <Stack.Screen name="Admin" component={Admin}></Stack.Screen> 
@@ -94,7 +93,7 @@ const App = () =>{
     <Stack.Screen name="Academic" component={Academic}></Stack.Screen>
     <Stack.Screen name="Staff" component={Staff}></Stack.Screen>
     <Stack.Screen name="StaffBoard" component={StaffBoard}></Stack.Screen>
-    <Stack.Screen name="FeeDetails" component={FeeDetails}></Stack.Screen>
+    {/* <Stack.Screen name="FeeDetails" component={FeeDetails}></Stack.Screen> */}
     <Stack.Screen name="ClassAttendance" component={ClassAttendance}></Stack.Screen>
     <Stack.Screen name="StaffAccount" component={StaffAccount}></Stack.Screen>
     <Stack.Screen name="Communication" component={Communication}></Stack.Screen>
